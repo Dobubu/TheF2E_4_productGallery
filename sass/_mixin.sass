@@ -1,0 +1,120 @@
+@charset "UTF-8"
+
+//variable
+$body-margin: 3px
+$body-fontSize: 17px
+$body-lineHeight: 1.8
+$body-color: #000
+
+$font-weight-light: 300
+$font-weight-regular: 400
+$font-weight-bold: 600
+
+//-----------------------------　background image 
+@mixin bg($img)   
+	background: url("../images/#{$img}")  
+	width: image-width("../images/#{$img}")  
+	height: image-height("../images/#{$img}")
+
+//-----------------------------　clear float
+%clearfix
+	&:before
+		content: ""
+		display: table
+	&:after
+		content: ""
+		display: table
+		clear: both
+	zoom: 1
+
+// @mixin font-size($font-size){
+//     font-size: $font-size +px;
+//     font-size: $font-size / $base-font-size +rem;
+// }
+
+%h
+	font-size: 2.4rem
+	margin: 1.5em 0 1em
+
+//-----------------------------　文章樣式+自行斷行
+%P-breakingline
+	font-family: '微軟正黑體'
+	word-break: break-all
+	text-align: justify
+	font-size: 16px
+	line-height: 1.5
+	letter-spacing: 1px
+
+//-----------------------------　水平分散
+%box-Horizontal
+	display: -webkit-box
+	display: -moz-box
+	display: -webkit-flex
+	display: -ms-flexbox
+	display: flex
+	-webkit-box-pack: justify
+	-ms-flex-pack: justify
+	justify-content: space-between
+//-----------------------------　垂直
+%box-Vertical
+	display: -webkit-box
+	display: -moz-box
+	display: -webkit-flex
+	display: -ms-flexbox
+	display: flex
+	-webkit-box-orient: Vertical
+	-ms-flex-direction: column
+	flex-direction: column
+//-----------------------------　置中垂直
+%box-VerticalCentering
+	display: -webkit-box
+	display: -moz-box
+	display: -webkit-flex
+	display: -ms-flexbox
+	display: flex
+	-webkit-box-orient: Vertical
+	-ms-flex-direction: column
+	flex-direction: column
+	-webkit-box-align: center
+	-ms-flex-align: center
+	align-items: center
+//-----------------------------　尾端對齊
+%box-end
+	display: -webkit-box
+	display: -moz-box
+	display: -webkit-flex
+	display: -ms-flexbox
+	display: flex
+	-webkit-box-align: end
+	-ms-flex-align: end
+	align-items: flex-end
+
+//-----------------------------　rwd breakpoint
+@mixin breakpoint($point)
+	@if $point == pc-large
+		// 熱門的桌上PC螢幕解析度
+		@media only screen and (max-width: 1280px)
+			@content
+	@else if $point == pc-small
+		// iPad的直、橫式解析度
+		@media only screen and (max-width: 1024px)
+			@content
+	@else if $point == tamenu
+		// 3個選單不見
+		// @media only screen and (max-width: 965px)
+		// @media only screen and (max-width: 1050px)
+		@media only screen and (max-width: 1270px)
+			@content
+	@else if $point == pad-large
+		// iPad的直、橫式解析度
+		@media only screen and (max-width: 786px)
+			@content
+	@else if $point == pad-small
+		@media only screen and (max-width: 480px)
+			@content
+	@else if $point == mobile-large
+		@media only screen and (max-width: 320px)
+			@content
+	@else if $point == mobile-small
+		@media only screen and (max-width: 240px)
+			@content
