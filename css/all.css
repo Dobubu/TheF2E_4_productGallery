@@ -1,4 +1,16 @@
 @charset "UTF-8";
+.orderItem_01 h2, .orderItem_01 h3, .orderItem_01 h4 {
+  white-space: nowrap;
+  font-weight: bold;
+  position: relative;
+}
+
+.greenBorder2 {
+  width: 240px;
+  height: 200px;
+  background: #50E3C2;
+}
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -203,11 +215,88 @@ a {
   font-weight: bold;
 }
 
+.gradients {
+  width: 240px;
+  height: 100px;
+  background-color: #50E3C2;
+  background: repeating-linear-gradient(135deg, #50E3C2, #50E3C2 15px, transparent 0, transparent 30px);
+  background-size: 100% 100px;
+}
+
+.greenBorder {
+  width: 240px;
+  height: 200px;
+  background: #fff;
+  border: 20px solid #50E3C2;
+}
+
 .container {
   width: 960px;
   margin: 0 auto;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.orderItem {
   display: grid;
-  grid-template-columns: repeat(8, 120px);
-  grid-template-rows: repeat(20, 110px);
-  background: red;
+  grid-template-columns: repeat(5, 120px);
+  grid-template-rows: repeat(4, 100px);
+}
+
+.orderItem_01 h2 {
+  grid-column-start: 1;
+  grid-row-start: 1;
+  z-index: 2;
+  font-size: 48px;
+  top: -14px;
+}
+.orderItem_01 h2:before {
+  content: attr(data-title);
+  position: absolute;
+  top: -15px;
+  height: 19px;
+  color: rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+.orderItem_01 h2:after {
+  content: attr(data-title);
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: -23px;
+  height: 19px;
+  color: rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.orderItem_01 h3 {
+  grid-column-start: 1;
+  grid-row-start: end;
+  z-index: 2;
+  font-size: 48px;
+}
+.orderItem_01 h4 {
+  grid-column-start: 5;
+  grid-row-start: 4;
+  font-style: italic;
+  transform: translateX(-85px) rotate(90deg);
+  font-size: 24px;
+}
+
+.orderImg_01 {
+  background-color: #8BC574;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: end;
+}
+
+.gradients01 {
+  grid-column-start: 1;
+  grid-row-start: end;
+  transform: translateX(25%) translatey(-50%);
 }

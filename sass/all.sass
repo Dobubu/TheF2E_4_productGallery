@@ -9,15 +9,86 @@
 		background: #000
 		color: #fff
 		padding: 2px 10px
-		font-size: 20px
+		font-size: $fs_20
 	h1
 		margin: .5em 0
-		font-size: 48px
+		font-size: $fs_48
 		font-weight: bold
+.gradients
+	width: 240px
+	height: 100px
+	background-color: $mainColor
+	background: repeating-linear-gradient(135deg, $mainColor, $mainColor 15px, transparent 0, transparent 30px)
+	background-size: 100% 100px
+.greenBorder
+	+greenBorder(240px, 200px)
+.greenBorder2
+	@extend %greenBackground
+
 .container
+	// width: 100%
+	// max-width: 960px 
 	width: 960px
 	margin: 0 auto
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-wrap: wrap
+	align-content: flex-start
+	// display: grid
+	// grid-template-columns: repeat(8, 120px)
+	// grid-template-rows: repeat(20, 110px)
+.orderItem
 	display: grid
-	grid-template-columns: repeat(8, 120px)
-	grid-template-rows: repeat(20, 110px)
-	background: red
+	grid-template-columns: repeat(5, 120px)
+	grid-template-rows: repeat(4, 100px)
+.orderItem_01
+	h2
+		grid-column-start: 1
+		grid-row-start: 1
+		z-index: 2
+		font-size: $fs_48
+		@extend %orderTitle
+		top: -14px
+		&:before
+			content: attr(data-title)
+			position: absolute
+			top: -15px
+			height: 19px
+			color: rgba(0, 0, 0, .3)
+			overflow: hidden
+		&:after
+			content: attr(data-title)
+			position: absolute
+			right: 0
+			left: 0
+			top: -23px
+			height: 19px
+			color: rgba(0, 0, 0, 0.1)
+			overflow: hidden
+	h3
+		grid-column-start: 1
+		grid-row-start: end
+		z-index: 2
+		font-size: $fs_48
+		@extend %orderTitle
+	h4
+		grid-column-start: 5
+		grid-row-start: 4
+		@extend %orderTitle
+		font-style: italic
+		transform: translateX(-85px) rotate(90deg)
+		font-size: $fs_24
+		@extend %orderTitle
+.orderImg_01
+	background-color: #8BC574
+	grid-column-start: 1
+	grid-column-end: 5
+	grid-row-start: 1
+	grid-row-end: end
+.gradients01
+	grid-column-start: 1
+	grid-row-start: end
+	transform: translateX(25%) translatey(-50%)
