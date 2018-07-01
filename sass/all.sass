@@ -3,7 +3,7 @@
 
 .header
 	text-align: center
-	margin-bottom: 75px
+	margin-bottom: 120px
 	span
 		display: inline-block
 		margin-top: 33px
@@ -98,7 +98,8 @@
 		transform: translateX(-85px) rotate(90deg)
 		
 .orderImg_01
-	background-color: #8BC574
+	background: url(../img/01.jpeg) no-repeat 50% 50%
+	background-size: cover
 	grid-column-start: 1
 	grid-column-end: 5
 	grid-row-start: 1
@@ -134,7 +135,8 @@
 		font-style: italic
 		transform: translateX(-15px) translatey(-25px)
 .orderImg_02
-	background-color: #8BC574
+	background: url(../img/02.jpeg) no-repeat 50% 50%
+	background-size: cover
 	grid-column-start: 1
 	grid-column-end: 3
 	grid-row-start: 2
@@ -171,7 +173,8 @@
 		font-style: italic
 		transform: translateX(15px)
 .orderImg_03
-	background-color: #8BC574
+	background: url(../img/03.jpeg) no-repeat 50% 50%
+	background-size: cover
 	grid-column-start: 1
 	grid-column-end: end
 	grid-row-start: 2
@@ -209,7 +212,8 @@
 		font-style: italic
 		transform: translateX(-30%) translateY(-45px) rotate(90deg)
 .orderImg_04
-	background-color: #8BC574
+	background: url(../img/04.jpeg) no-repeat 50% 50%
+	background-size: cover
 	grid-column-start: 3
 	grid-column-end: 5
 	grid-row-start: 2
@@ -224,3 +228,118 @@
 	grid-column-start: 3
 	grid-row-start: 5
 	transform: translatey(50%)
+
+.orderItem_05
+	display: grid
+	grid-template-columns: repeat(4, 120px)
+	grid-template-rows: repeat(4, 100px)
+	h2
+		grid-column-start: 1
+		grid-row-start: 2
+		z-index: 2
+		transform: translateY(50%)
+	h3
+		grid-column-start: 2
+		grid-row-start: 4
+		z-index: 2
+		text-align: left
+		transform: translateY(-50%)
+	h4
+		grid-column-start: 4
+		grid-row-start: 2
+		font-style: italic
+		transform: translateX(100%)
+.orderImg_05
+	background: url(../img/05.jpeg) no-repeat 50% 50%
+	background-size: cover
+	grid-column-start: 3
+	grid-column-end: 5
+	grid-row-start: 2
+	grid-row-end: 4
+.greenBorder05
+	grid-column-start: 2
+	grid-row-start: 3
+	z-index: -2
+	transform: translateY(50%)
+	+greenBorder(240px, 100px)
+.gradients05
+	grid-column-start: 1
+	grid-row-start: 1
+	transform: translateX(25%) translatey(50%)
+
+.orderItem_06
+	display: grid
+	grid-template-columns: repeat(4, 120px)
+	grid-template-rows: repeat(6, 100px)
+	h2
+		grid-column-start: 2
+		grid-row-start: 3
+		z-index: 2
+		transform: translateX(-12%) translateY(-45%)
+	h3
+		grid-column-start: 1
+		grid-row-start: 4
+		z-index: 2
+		text-align: left
+		transform: translateX(-50%) translateY(55%)
+	h4
+		grid-column-start: 2
+		grid-row-start: 6
+		font-style: italic
+		transform: translateX(40%) translateY(100%)
+.orderImg_06
+	background: url(../img/06.jpeg) no-repeat 50% 50%
+	background-size: cover
+	grid-column-start: 1
+	grid-column-end: 5
+	grid-row-start: 3
+	grid-row-end: 7
+.greenBorder06
+	grid-column-start: 1
+	grid-row-start: 6
+	z-index: -2
+	transform: translateY(50%)
+	+greenBorder(480px, 100px)
+.greenBackground06
+	grid-column-start: 1
+	grid-row-start: 5
+	z-index: -1
+	transform: translateX(-25%)
+
+.orderItem_07
+	display: grid
+	grid-template-columns: repeat(3, 120px)
+	grid-template-rows: repeat(5, 100px)
+	h2
+		grid-column-start: 2
+		grid-row-start: 2
+		z-index: 2
+		transform: translateX(50%) translateY(10%) rotate(90deg)
+	h3
+		grid-column-start: 3
+		grid-row-start: 5
+		z-index: 2
+		text-align: right
+		transform: translateY(50%)
+	h4
+		grid-column-start: 1
+		grid-row-start: 2
+		font-style: italic
+		transform: translateY(-25%)
+.orderImg_07
+	background: url(../img/07.jpeg) no-repeat 50% 50%
+	background-size: cover
+	grid-column-start: 1
+	grid-column-end: 3
+	grid-row-start: 2
+	grid-row-end: 6
+.greenBorder07
+	grid-column-start: 1
+	grid-row-start: 1
+	z-index: -2
+	transform: translateX(25%) translateY(20%)
+	+greenBorder(240px, 300px)
+.greenBackground07
+	grid-column-start: 2
+	grid-row-start: 4
+	z-index: -1
